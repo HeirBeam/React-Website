@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { url } from "inspector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
     description: "Apps and Unity WebGL projects at heirbeam.dev",
     url: "https://heirbeam.dev",
     siteName: "heirbeam.dev",
-    images: ["/og.jpg"],
+    images: [
+      {url: "/og.jpg", width: 1200, height: 630, alt: "Ibraheem Sharif - heirbeam.dev"},
+    ],
+    locale: "en_GB",
     type: "website",
   },
   twitter: { card: "summary_large_image", creator: "@yourhandle" },
