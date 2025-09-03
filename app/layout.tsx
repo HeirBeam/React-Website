@@ -18,19 +18,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ibraheem Sharif — Developer",
   description: "I build apps and Unity games.",
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://heirbeam.dev"),
   openGraph: {
     title: "Ibraheem Sharif — Developer",
     description: "Apps and Unity WebGL projects at heirbeam.dev",
     url: "https://heirbeam.dev",
     siteName: "heirbeam.dev",
-    images: [
-      {url: "/og.jpg", width: 1200, height: 630, alt: "Ibraheem Sharif - heirbeam.dev"},
-    ],
+    images: [{url: "/og.jpg?v=1", width: 1200, height: 630, alt: "Ibraheem Sharif - heirbeam.dev"},],
     locale: "en_GB",
     type: "website",
-  },
-  twitter: { card: "summary_large_image", creator: "@yourhandle" },
+  }
 };
 
 export default function RootLayout({
