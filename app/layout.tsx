@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import NavLink from "./components/NavLink";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { url } from "inspector";
@@ -43,20 +44,15 @@ export default function RootLayout({
 
         {/* Page header + primary nav */}
         <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-          <nav
-            aria-label="Primary"
-            className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between"
-          >
-            <Link href="/" className="font-semibold tracking-tight">
-              Ibraheem Sharif
-            </Link>
-            <div className="flex gap-4">
-              <Link href="/projects" className="hover:underline">Projects</Link>
-              <Link href="/about" className="hover:underline">About</Link>
-              <Link href="/contact" className="hover:underline">Contact</Link>
-            </div>
-          </nav>
-        </header>
+  <nav className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
+    <Link href="/" className="font-semibold tracking-tight">Ibraheem Sharif</Link>
+    <div className="flex gap-4">
+      <NavLink href="/projects">Projects</NavLink>
+      <NavLink href="/about" exact>About</NavLink>
+      <NavLink href="/contact" exact>Contact</NavLink>
+    </div>
+  </nav>
+</header>
 
         {/* Main content area (one per page) */}
         <main id="main" className="mx-auto max-w-5xl px-6 py-10">
