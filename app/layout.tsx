@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YourName — Developer",
+  title: "Ibraheem Sharif — Developer",
   description: "I build apps and Unity games.",
   metadataBase: new URL("https://your-domain.com"),
   openGraph: {
-    title: "YourName — Developer",
-    description: "I build apps and Unity games.",
-    url: "https://your-domain.com",
-    siteName: "YourName",
+    title: "Ibraheem Sharif — Developer",
+    description: "Apps and Unity WebGL projects at heirbeam.dev",
+    url: "https://heirbeam.dev",
+    siteName: "heirbeam.dev",
     images: ["/og.jpg"],
     type: "website",
   },
