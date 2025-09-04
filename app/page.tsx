@@ -1,5 +1,5 @@
-// app/page.tsx
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
    return (
@@ -23,6 +23,14 @@ export default function Home() {
 
         {/* Right: image placeholder */}
         <div className="rounded-xl border aspect-video bg-gray-100 flex items-center justify-center">
+           <Image
+            src="/hero.webp"       // or /hero.jpg
+            alt="Ibraheem Sharif — Apps & Unity Games"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1000px"
+          />
           <span className="text-gray-500">Hero image / screenshot</span>
         </div>
       </div>
