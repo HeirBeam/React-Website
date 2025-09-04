@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-   return (
+  return (
     <section className="mx-auto max-w-5xl px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: text */}
@@ -12,27 +12,24 @@ export default function Home() {
             Play my WebGL builds in the browser and check out recent projects.
           </p>
           <div className="mt-6 flex gap-3">
-            <Link href="/projects" className="rounded-lg bg-black text-white px-4 py-2">
-              View Projects
-            </Link>
-            <Link href="/about" className="rounded-lg border px-4 py-2">
-              About me
-            </Link>
+            <Link href="/projects" className="rounded-lg bg-black text-white px-4 py-2">View Projects</Link>
+            <Link href="/about" className="rounded-lg border px-4 py-2">About me</Link>
           </div>
         </div>
 
-        {/* Right: image placeholder */}
-        <div className="rounded-xl border aspect-video bg-gray-100 flex items-center justify-center">
-           <Image
-            src="/hero.webp"       // or /hero.jpg
+        {/* Right: hero image */}
+        <div className="relative rounded-xl border aspect-video overflow-hidden">
+          <Image
+            src="/hero.webp"              // or /hero.jpg
             alt="Ibraheem Sharif — Apps & Unity Games"
             fill
             priority
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1000px"
           />
-          <span className="text-gray-500">Hero image / screenshot</span>
         </div>
+        {/* Optional caption below the image */}
+        {/* <p className="md:col-start-2 text-sm text-gray-500">Hero image / screenshot</p> */}
       </div>
     </section>
   );
